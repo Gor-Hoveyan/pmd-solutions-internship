@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import styles from "./Login.module.scss";
-import logo from "./../../assets/loginLogo.png";
-import eye from "./../../assets/eye.png";
+import logo from "./../../assets/login/loginLogo.png";
+import eye from "./../../assets/login/eye.png";
 
 export default function Login() {
   const passwordRef = useRef();
