@@ -1,0 +1,50 @@
+.main {
+  grid-column: 3;
+  grid-row: 1;
+  max-width: 100%;
+}
+.header {
+  font-weight: 600;
+  font-size: 22px;
+  color: #343c6a;
+  margin-bottom: 20px;
+}
+.recentOrders {
+  background: white;
+  border-radius: 25px;
+  padding: 10px 15px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0;
+  section,
+  p {
+    text-align: left;
+  }
+  p {
+    max-width: max-content;
+    text-wrap: nowrap;
+  }
+  section {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+.red {
+  color: #ff4b4a;
+}
+.green {
+  color: #41d4a8;
+}
+.message,
+.red,
+.green {
+  font-weight: 500;
+}
+.date {
+  color: #718ebf;
+  font-size: 15px;
+}
