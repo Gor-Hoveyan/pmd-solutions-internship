@@ -1,0 +1,20 @@
+.main {
+  grid-row: 2;
+  grid-column: 3;
+}
+.header {
+  font-weight: 600;
+  font-size: 22px;
+  color: #343c6a;
+  margin-bottom: 20px;
+}
+.chartSection {
+  background: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

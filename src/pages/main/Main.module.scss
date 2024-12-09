@@ -1,0 +1,15 @@
+@import url("https://fonts.cdnfonts.com/css/mont");
+
+.main {
+  min-height: max-content;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  width: 90%;
+  position: relative;
+  grid-gap: 30px;
+  top: 0;
+  left: 0;
+  font-family: Inter;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}

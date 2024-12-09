@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zen+Kaku+Gothic+Antique&display=swap");
+
+.navbar {
+  max-height: 100vh;
+  height: 100vh;
+  border-right: 1px solid #e6eff5;
+  width: 250px;
+  padding: 40px;
+  z-index: 5;
+  background: #fff;
+  position: relative;
+  left: 0;
+}
+
+.desktopBar,
+.tabBar,
+.logoContent {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .desktopBar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 375px) {
+  .tabBar {
+    display: block;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    .logoContent {
+      display: inline;
+      color: #343c6a;
+      font-weight: 900;
+      font-size: 25px;
+      font-family: Mont;
+      line-height: 31.95px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.logoImg {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
