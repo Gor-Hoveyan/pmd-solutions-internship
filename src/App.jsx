@@ -1,6 +1,7 @@
 import styles from "./App.module.scss";
-import Header from "./components/header/Header";
+import Login from "./components/login/Login";
 import Navbar from "./components/navbar/Navbar";
+import Header from "./components/header/Header";
 import Main from "./pages/main/Main";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Main />
         </div>
       </div>
+      <Login />
     </main>
   );
 }

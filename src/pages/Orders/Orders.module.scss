@@ -1,0 +1,53 @@
+@import url("https://fonts.cdnfonts.com/css/mont");
+.main {
+  font-family: Inter;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 22px;
+  color: #343c6a;
+  margin-bottom: 20px;
+}
+.table {
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  padding: 10px;
+  th {
+    color: #718ebf;
+    font-weight: 500;
+    border-bottom: 1px solid #e6eff5;
+    padding: 10px;
+  }
+  td {
+    color: #232323;
+    padding: 10px 10px;
+    border-bottom: 1px solid #f2f4f7;
+  }
+  th,
+  td {
+    text-align: left;
+  }
+  tr:last-child {
+    td {
+      border: none;
+    }
+  }
+  .amount {
+    color: #16dbcc;
+  }
+  .btn {
+    color: #123288;
+    width: 100px;
+    border: 1px solid #123288;
+    background: white;
+    padding: 10px;
+    text-align: left;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
