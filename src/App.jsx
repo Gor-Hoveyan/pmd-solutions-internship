@@ -4,7 +4,8 @@ import Header from "./components/header/Header";
 import Main from "./pages/main/Main.jsx";
 import Login from "./pages/login/Login.jsx";
 import { Route, Routes } from "react-router";
-import Orders from "./pages/Orders/Orders.jsx";
+import Orders from "./pages/orders/orders.jsx";
+import OrderDetails from "./pages/orderDetails/OrderDetails.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/login" element={<Login />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
           </Routes>
         </div>
       </div>

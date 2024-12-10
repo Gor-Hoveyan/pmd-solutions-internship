@@ -23,6 +23,8 @@
     }
   }
   .active::before {
+    width: 6px;
+    height: 60px;
     content: "";
     display: block;
     background-color: #2d60ff;
@@ -31,22 +33,24 @@
     position: absolute;
     left: 0;
   }
-  .navLink {
+  .navLink,
+  .active {
     text-decoration: none;
     font-weight: 500;
     font-family: Inter;
-    color: #b1b1b1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
+  .navLink {
+    color: #b1b1b1;
+  }
+  .active {
+    color: #2d60ff;
+  }
 }
 
 /*@media screen and (min-width: 1024px) {
-  .active::before {
-    width: 6px;
-    height: 60px;
-  }
   .list li {
     font-size: 18px;
   }

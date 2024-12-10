@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Orders.module.scss";
 import Pagination from "../../components/pagination/Pagination";
 import splitWithCommas from "../../utils/helperFunctions/splitWithComma";
+import { NavLink } from "react-router";
 
 export default function Orders() {
   const [page, setPage] = useState(1);
@@ -30,7 +31,9 @@ export default function Orders() {
               <td>{item.date}</td>
               <td className={styles.amount}>${splitWithCommas(item.amount)}</td>
               <td>
-                <button className={styles.btn}>View</button>
+                <NavLink to={`/order/${item.orderId}`}>
+                  <button className={styles.btn}>View</button>
+                </NavLink>
               </td>
             </tr>
           ))}
@@ -58,7 +61,7 @@ const fakeData = Array.from({ length: 405 }, (_, index) => ({
     "Online Course",
     "Flight Booking",
   ][index % 10],
-  orderId: `#${12548796 + index}`,
+  orderId: `${12548796 + index}`,
   type: [
     "Shopping",
     "Entertainment",
