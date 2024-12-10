@@ -17,8 +17,14 @@
 
   .active {
     color: #2d60ff;
+    .img {
+      filter: brightness(0) saturate(100%) invert(32%) sepia(82%)
+        saturate(3223%) hue-rotate(193deg) brightness(95%) contrast(97%);
+    }
   }
   .active::before {
+    width: 6px;
+    height: 60px;
     content: "";
     display: block;
     background-color: #2d60ff;
@@ -27,13 +33,24 @@
     position: absolute;
     left: 0;
   }
+  .navLink,
+  .active {
+    text-decoration: none;
+    font-weight: 500;
+    font-family: Inter;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .navLink {
+    color: #b1b1b1;
+  }
+  .active {
+    color: #2d60ff;
+  }
 }
 
-@media screen and (min-width: 1024px) {
-  .active::before {
-    width: 6px;
-    height: 60px;
-  }
+/*@media screen and (min-width: 1024px) {
   .list li {
     font-size: 18px;
   }
@@ -55,7 +72,7 @@
     width: 20px;
     height: 20px;
   }
-}
+}*/
 
 .img {
   margin-right: 20px;

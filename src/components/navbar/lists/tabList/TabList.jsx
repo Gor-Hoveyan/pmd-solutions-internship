@@ -9,7 +9,7 @@ import services from "./../../../../assets/navbar/tab/services.svg";
 import myPrivileges from "./../../../../assets/navbar/products.svg";
 import setting from "./../../../../assets/navbar/setting.svg";
 
-export default function TabList() {
+export default function TabList({ path }) {
   return (
     <ul className={styles.list}>
       <li className={styles.active}>
