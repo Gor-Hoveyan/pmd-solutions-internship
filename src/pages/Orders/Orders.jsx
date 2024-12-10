@@ -4,7 +4,6 @@ import Pagination from "../../components/pagination/Pagination";
 import splitWithCommas from "../../utils/helperFunctions/splitWithComma";
 
 export default function Orders() {
-  console.log(fakeData);
   const [page, setPage] = useState(1);
   return (
     <section className={styles.main}>
