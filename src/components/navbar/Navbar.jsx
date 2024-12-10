@@ -1,9 +1,12 @@
 import styles from "./Navbar.module.scss";
 import creditCard from "./../../assets/navbar/credit-card.png";
 import DesktopList from "./lists/desktopList/DesktopList";
-import TabList from "./lists/tabList/TabList";
+//import TabList from "./lists/tabList/TabList";
+import { useLocation } from "react-router";
 
 export default function Navbar() {
+  const params = useLocation();
+
   return (
     <nav className={styles.navbar}>
       <section className={styles.logo}>
@@ -15,11 +18,11 @@ export default function Navbar() {
         <h3 className={styles.logoContent}>BankDash.</h3>
       </section>
       <section className={styles.desktopBar}>
-        <DesktopList />
+        <DesktopList path={params.pathname} />
       </section>
-      <section className={styles.tabBar}>
-        <TabList />
-      </section>
+      {/* <section className={styles.tabBar}>
+        <TabList path={params.pathname} />
+      </section> */}
     </nav>
   );
 }
