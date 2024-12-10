@@ -1,0 +1,102 @@
+@import url("https://fonts.cdnfonts.com/css/mont");
+
+.header {
+  position: relative;
+  top: 0;
+  z-index: 0;
+  border-bottom: 1px solid #e6eff5;
+  background: white;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  flex: row;
+  align-items: center;
+  padding: 0 30px;
+  font-family: Inter;
+}
+
+.list {
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.heading {
+  grid-column: 1;
+  font-weight: 600;
+  color: #343c6a;
+}
+
+// Styles for custom search input
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 40px;
+}
+
+.searchIcon {
+  font-size: 18px;
+  color: #a0a7b2;
+  margin-right: 10px;
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #606770;
+  font-size: 16px;
+  width: 100%;
+}
+
+.searchBar input::placeholder {
+  color: #a0a7b2;
+}
+
+// Media query
+
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-template-columns: 40% 60%;
+  }
+  .searchBar {
+    padding: 15px 20px;
+  }
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .heading {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 375px) {
+  .header {
+    grid-template-columns: 30% 70%;
+  }
+  .searchBar {
+    padding: 10px 20px;
+  }
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .heading {
+    font-size: 25px;
+  }
+}
