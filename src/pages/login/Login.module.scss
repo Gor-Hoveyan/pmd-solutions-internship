@@ -156,6 +156,10 @@
     padding: 20px 0;
     font-weight: 700;
   }
+  .error {
+    color: tomato;
+    font-weight: 600;
+  }
 }
 
 // Styles for custom input
@@ -205,7 +209,7 @@
 .toggleVisibility {
   position: absolute;
   top: calc(50% + 2px);
-  right: -10px;
+  right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
   border: none;
