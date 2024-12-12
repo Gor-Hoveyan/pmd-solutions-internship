@@ -3,9 +3,16 @@ import styles from "./Orders.module.scss";
 import Pagination from "../../components/pagination/Pagination";
 import splitWithCommas from "../../utils/helperFunctions/splitWithComma";
 import { NavLink } from "react-router";
+import api from "../../api/axiosConfig";
 
 export default function Orders() {
   const [page, setPage] = useState(1);
+
+  async function getOrders() {
+    const data = await api.get(`/admin/orders?page=1`);
+    console.log(await data.json());
+  }
+  getOrders();
   return (
     <section className={styles.main}>
       <h3 className={styles.header}>Order list</h3>
