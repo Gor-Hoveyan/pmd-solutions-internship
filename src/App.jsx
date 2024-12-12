@@ -1,8 +1,11 @@
 import styles from "./App.module.scss";
-import Login from "./pages/login/Login";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
-import Main from "./pages/main/Main";
+import Main from "./pages/main/Main.jsx";
+import Login from "./pages/login/Login.jsx";
+import { Route, Routes } from "react-router";
+import Orders from "./pages/orders/orders.jsx";
+import OrderDetails from "./pages/orderDetails/OrderDetails.jsx";
 
 function App() {
   return (
@@ -12,10 +15,14 @@ function App() {
         <div className={styles.container}>
           {" "}
           <Header />
-          <Main />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
+          </Routes>
         </div>
       </div>
-      ={" "}
     </main>
   );
 }
