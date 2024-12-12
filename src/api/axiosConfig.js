@@ -2,7 +2,6 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://zangak.pmdsolutions.org",
-  withCredentials: true,
 });
 
 api.interceptors.request.use(function (config) {

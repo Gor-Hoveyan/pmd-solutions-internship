@@ -1,6 +1,24 @@
+import { useParams } from "react-router";
 import styles from "./OrderDetails.module.scss";
+import { getOrder } from "../../api/routes/ordersApi";
+import { useEffect, useState } from "react";
 
 export default function OrderDetails() {
+  const params = useParams();
+  const [order, setOrder] = useState();
+
+  async function fetchOrder() {
+    const data = await getOrder(params.id);
+    if (data.success) {
+      setOrder(data.data);
+      console.log(data);
+    }
+  }
+
+  useEffect(() => {
+    fetchOrder();
+  }, []);
+
   return (
     <section className={styles.orderDetails}>
       <h3 className={styles.header}>Order details</h3>
