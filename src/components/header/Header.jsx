@@ -3,12 +3,19 @@ import settings from "./../../assets/header/settings.svg";
 import notifications from "./../../assets/header/notifications.svg";
 import loupe from "./../../assets/header/loupe.svg";
 import avatar from "./../../assets/header/avatar.png";
+import { useLocation } from "react-router";
 
 export default function Header() {
+  const location = useLocation();
   return (
     <header className={styles.header}>
       <section>
-        <h2 className={styles.heading}>Overview</h2>
+        <h2 className={styles.heading}>
+          {location && location.pathname.length > 1
+            ? location.pathname.slice(1)[0].toUpperCase() +
+              location.pathname.split("").slice(2).join("")
+            : "Overview"}
+        </h2>
       </section>
       <section>
         <ul className={styles.list}>

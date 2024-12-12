@@ -20,7 +20,6 @@ export default function Orders() {
 
   useEffect(() => {
     fetchOrders();
-    console.log(orders);
   }, []);
 
   return (
