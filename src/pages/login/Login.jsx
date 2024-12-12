@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Login.module.scss";
 import logo from "./../../assets/login/loginLogo.png";
 import eye from "./../../assets/login/eye.png";
@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
-export default function Login() {
+export default function Login({ setIsAuthenticated }) {
   const passwordRef = useRef();
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function Login() {
       if (fetchedData.data.success) {
         setErrorMessage("");
         localStorage.setItem("token", await fetchedData.data.data.token);
-        navigate("/");
+        setIsAuthenticated(true);
       } else {
         setErrorMessage("Entered invalid email or password");
       }
